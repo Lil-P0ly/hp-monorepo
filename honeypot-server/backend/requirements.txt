@@ -1,0 +1,11 @@
+flask
+flask-sqlalchemy
+flask-cors
+confluent-kafka
+python-dotenv
+psycopg2-binary
+sqlalchemy
+Flask==3.1.0
+python-dotenv==1.0.1
+prometheus_client
+PyJWT

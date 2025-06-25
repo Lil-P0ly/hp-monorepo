@@ -1,0 +1,24 @@
+/* src/components/LogTable.css */
+.log-table-container {
+    overflow-x: auto; /* Горизонтальная прокрутка, если таблица широкая */
+}
+
+.log-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.log-table th, .log-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.log-table th {
+    background-color: #f2f2f2;
+}
+
+.log-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}

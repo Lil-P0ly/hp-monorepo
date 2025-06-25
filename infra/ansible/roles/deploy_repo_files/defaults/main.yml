@@ -1,0 +1,4 @@
+---
+# defaults file for deploy_repo_files
+repo_url: "repo-url"
+branch_name: "master"

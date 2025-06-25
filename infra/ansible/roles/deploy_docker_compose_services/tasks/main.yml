@@ -1,0 +1,46 @@
+---
+# tasks file for deploy_docker_compose_services
+- name: Start Grafana
+  shell: docker compose up --build -d grafana
+  args:
+    chdir: "{{ project_path }}"
+
+- name: Start Loki
+  shell: docker compose up --build -d loki
+  args:
+    chdir: "{{ project_path }}"
+
+- name: Start Prometheus
+  shell: docker compose up --build -d prometheus
+  args:
+    chdir: "{{ project_path }}"
+
+- name: Start Redpanda and Redpanda-init
+  shell: docker compose up --build -d redpanda redpanda-init
+  args:
+    chdir: "{{ project_path }}"
+
+- name: Start DB
+  shell: docker compose up --build -d db
+  args:
+    chdir: "{{ project_path }}"
+
+- name: Start Postgres Exporter
+  shell: docker compose up --build -d postgres-exporter
+  args:
+    chdir: "{{ project_path }}"
+
+- name: Start Honeypot Backend
+  shell: docker compose up --build -d honeypot-backend
+  args:
+    chdir: "{{ project_path }}"
+
+- name: Start Honeypot Frontend
+  shell: docker compose up --build -d honeypot-frontend
+  args:
+    chdir: "{{ project_path }}"
+
+- name: Start Honeypot Bait
+  shell: docker compose up --build -d honeypot-bait
+  args:
+    chdir: "{{ project_path }}"

@@ -1,0 +1,55 @@
+.app-shell {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5faff, #f0f8ff);
+}
+
+@media (prefers-color-scheme: dark) {
+    .app-shell {
+        background: linear-gradient(135deg, #0d1117, #161b22);
+    }
+}
+
+.tabs-tab {
+    transition: all 0.3s ease;
+}
+
+.tabs-tab[data-active] {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tabs-tab:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .mantine-Table-root {
+        font-size: 14px;
+    }
+
+    .mantine-Table-th,
+    .mantine-Table-td {
+        padding: 8px 12px;
+        max-width: 150px;
+    }
+
+    .mantine-Table-tr {
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .mantine-Table-th,
+    .mantine-Table-td {
+        display: block;
+        width: 100%;
+        text-align: left;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+* {
+    font-family: 'Inter', sans-serif !important;
+}

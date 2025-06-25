@@ -1,0 +1,50 @@
+* {
+  font-family: 'Inter', sans-serif !important;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5faff, #f0f8ff);
+}
+
+@media (prefers-color-scheme: dark) {
+  .app-shell {
+    background: linear-gradient(135deg, #0d1117, #161b22);
+  }
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.mantine-Table-td,
+.mantine-Table-th {
+  white-space: normal;
+  word-wrap: break-word;
+  max-width: 300px;
+}
+
+@media (max-width: 768px) {
+  .mantine-Table-root {
+    font-size: 14px;
+  }
+
+  .mantine-Table-th,
+  .mantine-Table-td {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .footer-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

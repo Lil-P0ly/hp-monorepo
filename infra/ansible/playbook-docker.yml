@@ -1,0 +1,10 @@
+---
+- hosts: linux_ubuntu_2
+  become: true
+  vars:
+    project_path: "/var/hp-monorepo"
+    server_ip: "51.250.96.18"
+  roles:
+    - { role: deploy_docker_install }
+    - { role: deploy_repo_files }
+    - { role: deploy_docker_compose_services }

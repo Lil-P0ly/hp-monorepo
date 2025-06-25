@@ -1,0 +1,6 @@
+[staging_servers]
+linux_ubuntu_1 ansible_host=158.160.85.162 owner=Max
+linux_ubuntu_2 ansible_host=51.250.96.18 owner=Max
+
+[company_servers:children]
+staging_servers

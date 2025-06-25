@@ -1,0 +1,19 @@
+---
+# tasks file for deploy_repo_files
+- name: Get updated files from git repository
+  git:
+    repo: "{{ repo_url }}"
+    dest: "{{ project_path }}"
+    update: yes
+    force: yes
+    version: "{{ branch_name }}"
+
+- name: Create env file
+  copy:
+    dest: "{{ project_path }}/.env"
+    content: |
+      REACT_APP_API_URL=https://{{ server_ip }}/api
+      SERVER_IP={{ server_ip }}
+    owner: root
+    group: root
+    mode: "0644"
